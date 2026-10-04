@@ -1,13 +1,17 @@
-package com.example.demo;
+package com.geeksforgeeks.SpringBootHelloWorld.controller;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
-public class DemoApplication {
+// Marking this class as a REST controller
+@RestController
+public class HelloWorldController { 
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
-
+    // Mapping the root URL ("/") to this method
+    @RequestMapping("/") 
+    public String helloWorld() { 
+        
+        // Returning a simple "Hello World" response
+        return "Hello World"; 
+    } 
 }
